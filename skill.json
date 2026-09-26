@@ -1,0 +1,37 @@
+{
+  "name": "genpark-indirect-prompt-injection-sanitizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Indirect prompt injection sanitizer and delimiter boundary firewall neutralizing embedded command overrides in untrusted context.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agent-security",
+  "tags": [
+    "prompt-injection",
+    "indirect-injection",
+    "untrusted-context",
+    "sanitizer",
+    "firewall"
+  ],
+  "inputs": {
+    "source_name": {
+      "type": "string",
+      "default": "web_scraped_doc.html"
+    }
+  },
+  "outputs": {
+    "sanitizer_id": {
+      "type": "string"
+    },
+    "threat_score": {
+      "type": "number"
+    },
+    "is_safe_for_agent_consumption": {
+      "type": "boolean"
+    },
+    "firewall_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
